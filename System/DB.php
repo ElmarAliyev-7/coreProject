@@ -3,8 +3,6 @@
 namespace System;
 
 use mysqli;
-use PDO;
-use PDOException;
 
 class DB
 {
@@ -64,7 +62,7 @@ class DB
         return new self();
     }
 
-    public static function prepare(): string
+    public static function prepareSql(): string
     {
         if(self::$select === true && self::$where === false) :
             self::select(self::$columns);
@@ -76,10 +74,13 @@ class DB
         return trim(htmlspecialchars(self::$query));
     }
 
-    public static function all(): object
+    public static function all(): \mysqli_result|bool
     {
-        $result = mysqli_query(self::$conn, self::prepare());
-        $row = mysqli_fetch_assoc($result);
-        return (object) $row;
+        return self::$conn->query(self::prepareSql());
+    }
+
+    public static function closeConnection()
+    {
+        mysqli_close(self::$conn);
     }
 }

@@ -10,12 +10,15 @@ class HomeController
     /**
      * @return bool|string
      */
-    public function index()
+    public function index(): bool|string
     {
-        $blogs = DB::table('blogs')->select('id')
-            ->where(['status' => 1, 'title' => 'title 1'])
-            ->all();
-        return $blogs;
+        $blogs = DB::table('blogs')->select('id, title, description, cover')
+            ->where(['title' => 'title 2'])->all();
         return View::show('home', ['blogs' => $blogs]);
+    }
+
+    public function __destruct()
+    {
+        DB::closeConnection();
     }
 }
