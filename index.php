@@ -7,5 +7,4 @@ function autoloadClass($className)
 }
 spl_autoload_register('autoloadClass');
 
-require_once 'config/db.php';
 require_once 'routes/web.php';

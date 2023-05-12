@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+require_once 'System/helpers.php';
 use System\DB;
-use System\View;
 
 class HomeController
 {
@@ -14,7 +14,7 @@ class HomeController
     {
         $blogs = DB::table('blogs')->select('id, title, description, cover')
             ->where(['title' => 'title 2'])->all();
-        return View::show('home', ['blogs' => $blogs]);
+        return view('home', ['blogs' => $blogs]);
     }
 
     public function __destruct()
