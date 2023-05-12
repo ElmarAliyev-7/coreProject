@@ -1,12 +1,23 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
 function homePage(){
     $home = new HomeController();
     return print_r($home->index());
+}
+
+// Define a function to handle the blogs page
+function blogsPage() {
+    $blogs = new BlogController();
+    return print_r($blogs->index());
+}
+
+// Define a function to handle the create blog page
+function createBlogPage() {
+    $blogs = new BlogController();
+    return print_r($blogs->create());
 }
 
 // Define a function to handle the about page
@@ -25,6 +36,12 @@ switch ($requestUri) {
         break;
     case '/about':
         aboutPage();
+        break;
+    case '/blogs':
+        blogsPage();
+        break;
+    case '/blogs/create' :
+        createBlogPage();
         break;
     default:
         // Handle 404 error

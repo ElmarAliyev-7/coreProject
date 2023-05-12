@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use System\DB;
 
-class HomeController extends Controller
+class BlogController extends Controller
 {
     /**
      * @return bool|string
@@ -12,6 +12,11 @@ class HomeController extends Controller
     public function index(): bool|string
     {
         $blogs = DB::table('blogs')->select('id, title, description, cover')->where(['status' => 1])->all();
-        return view('home', ['blogs' => $blogs]);
+        return view('blogs.index', ['blogs' => $blogs]);
+    }
+
+    public function create(): bool|string
+    {
+        return view('blogs.create');
     }
 }
