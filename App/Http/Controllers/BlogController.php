@@ -11,12 +11,23 @@ class BlogController extends Controller
      */
     public function index(): bool|string
     {
-        $blogs = DB::table('blogs')->select('id, title, description, cover')->where(['status' => 1])->all();
+        $blogs = DB::table('blogs')->select('id, title, description, cover, status')->all();
         return view('blogs.index', ['blogs' => $blogs]);
     }
 
+    /**
+     * @return bool|string
+     */
     public function create(): bool|string
     {
         return view('blogs.create');
+    }
+
+    public function store()
+    {
+        $request = parent::request();
+        $blog = DB::table('blogs')->create($request);
+        return print_r($blog);
+//        return ($blog) ? 'success' : 'error';
     }
 }

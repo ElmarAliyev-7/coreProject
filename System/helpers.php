@@ -1,6 +1,7 @@
 <?php
 
 use System\View;
+use App\Http\Controllers\BlogController;
 
 /**
  * @param string $name
@@ -31,4 +32,12 @@ function str_limit(string $str, int $limit, string $ext = '..'): string
 {
     $str = substr($str, 0, $limit);
     return $str . $ext;
+}
+
+/**
+ * @return bool|string
+ */
+function storeBlog(): bool|string
+{
+    return (new BlogController)->store();
 }

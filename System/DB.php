@@ -79,8 +79,22 @@ class DB
         return self::$conn->query(self::prepareSql());
     }
 
-    public static function closeConnection()
+    public static function create($request)
     {
-        mysqli_close(self::$conn);
+        $bind = "s";
+        foreach ($request as $key => $value) :
+            $bind .= $bind;
+        endforeach;
+
+        $array_keys = array_keys($request);
+        $array_keys = implode(",", $array_keys);
+
+        $array_values = array_values($request);
+        $array_values = implode(",", $array_values);
+
+
+        self::$query = "INSERT INTO " . self::$table . " ($array_keys) VALUES ($array_values)";
+        $stmt = self::$conn->prepare(self::$query);
+        return ($stmt->execute()) ? 1 : 0;
     }
 }
