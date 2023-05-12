@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-require_once 'System/View.php';
+use System\DB;
 use System\View;
-use PDO;
 
 class HomeController
 {
     /**
      * @return bool|string
      */
-    public function index(): bool|string
+    public function index()
     {
-        global $conn;
-        $stmt = $conn->prepare('SELECT * FROM blogs');
-        $stmt->execute();
-        $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $blogs = DB::table('blogs')->all();
         return View::show('home', ['blogs' => $blogs]);
     }
 }
