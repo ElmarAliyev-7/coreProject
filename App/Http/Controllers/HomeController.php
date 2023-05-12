@@ -12,7 +12,10 @@ class HomeController
      */
     public function index()
     {
-        $blogs = DB::table('blogs')->all();
+        $blogs = DB::table('blogs')->select('id')
+            ->where(['status' => 1, 'title' => 'title 1'])
+            ->all();
+        return $blogs;
         return View::show('home', ['blogs' => $blogs]);
     }
 }
