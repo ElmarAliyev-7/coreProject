@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use JetBrains\PhpStorm\Pure;
+
 require_once 'System/helpers.php';
 
 class Controller
 {
-    public static function request()
+    #[Pure] public static function request(): array
     {
         $request = [];
-
         foreach ($_REQUEST as $name => $value) :
             $request[$name] = self::sanitize_input($value);
         endforeach;
+
+        foreach ($_FILES as $name => $value) :
+            $request[$name] = self::sanitize_input($value['name']);
+        endforeach;
+
         return $request;
     }
 

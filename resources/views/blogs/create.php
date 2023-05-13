@@ -1,8 +1,14 @@
-<?php include_once 'resources/views/layouts/header.php'; ?>
+<?php
+include_once 'resources/views/layouts/header.php';
+
+if(isset($_POST['submit'])) :
+    $result = storeBlog();
+    echo $result;
+endif;
+?>
     <h1 class="text-center">Create Blog Page</h1>
     <div class="container my-1">
         <form method="post" enctype="multipart/form-data">
-            <?php storeBlog();?>
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" class="form-control" id="title" placeholder="Enter title">
@@ -19,7 +25,7 @@
                 <input type="checkbox" name="status" class="form-check-input" id="status">
                 <label class="form-check-label" for="status">Status</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 <?php include_once 'resources/views/layouts/footer.php'; ?>

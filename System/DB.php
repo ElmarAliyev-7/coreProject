@@ -90,22 +90,22 @@ class DB
         return self::$conn->query(self::prepareSql())->fetch(PDO::FETCH_ASSOC);
     }
 
-    public static function create($request)
+    public static function create(array $request): bool
     {
-        $bind = "s";
+        // Get columns name as string
+        $columns = implode(",", array_keys($request));
+        // Prepare values
+        $values = '';
+        $execute_data = [];
         foreach ($request as $key => $value) :
-            $bind .= $bind;
+            $prepared_key = ":$key";
+            $values .= $prepared_key . ",";
+            $execute_data[$prepared_key] = $value;
         endforeach;
-
-        $array_keys = array_keys($request);
-        $array_keys = implode(",", $array_keys);
-
-        $array_values = array_values($request);
-        $array_values = implode(",", $array_values);
-
-
-        self::$query = "INSERT INTO " . self::$table . " ($array_keys) VALUES ($array_values)";
-        $stmt = self::$conn->prepare(self::$query);
-        return ($stmt->execute()) ? 1 : 0;
+        $values = substr(strtolower($values), 0,-1);
+        // Run Query
+        $sql = "INSERT INTO " . self::$table . " ($columns) VALUES ($values)";
+        $stmt = self::$conn->prepare($sql);
+        return $stmt->execute($execute_data);
     }
 }

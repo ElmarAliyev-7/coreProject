@@ -34,10 +34,7 @@ function str_limit(string $str, int $limit, string $ext = '..'): string
     return $str . $ext;
 }
 
-/**
- * @return bool|string
- */
-function storeBlog(): bool|string
+function storeBlog()
 {
     return (new BlogController)->store();
 }

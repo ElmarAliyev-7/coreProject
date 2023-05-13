@@ -44,9 +44,9 @@ $segments = explode('/', $_SERVER['REQUEST_URI']);
 // Map the requested URL to a corresponding action
 if($requestUri == '/') :
     homePage();die();
-elseif($requestUri == '/about') :
+elseif($requestUri == '/about' or $requestUri === '/about/') :
     aboutPage();die();
-elseif($requestUri == '/blogs') :
+elseif($requestUri === '/blogs' or $requestUri === '/blogs/') :
     blogsPage();die();
 elseif($segments[1] === 'blogs' and $segments[2] === 'show'):
     blogShowPage($segments[3]);die();
