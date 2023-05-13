@@ -1,4 +1,7 @@
-<?php require_once 'System/helpers.php'; ?>
+<?php
+require_once 'System/helpers.php';
+const baseUrl = 'http://localhost:8080';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,20 +17,20 @@
 <body>
 <!-- Start navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="http://localhost:8080/">Elmar Aliyev</a>
+    <a class="navbar-brand" href="<?=baseUrl;?>">Elmar Aliyev</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item <?=is_current('/');?>">
-                <a class="nav-link" href="http://localhost:8080/">Home</a>
+                <a class="nav-link" href="<?=baseUrl;?>">Home</a>
             </li>
             <li class="nav-item <?=is_current('/blogs');?>">
-                <a class="nav-link" href="http://localhost:8080/blogs">Blogs</a>
+                <a class="nav-link" href="<?=baseUrl;?>/blogs">Blogs</a>
             </li>
             <li class="nav-item <?=is_current('/blogs/create');?>">
-                <a class="nav-link" href="http://localhost:8080/blogs/create">Create Blog</a>
+                <a class="nav-link" href="<?=baseUrl;?>/blogs/create">Create Blog</a>
             </li>
         </ul>
     </div>
