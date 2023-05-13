@@ -9,7 +9,7 @@ class BlogController extends Controller
     /**
      * @return bool|string
      */
-    public function index(): bool|string
+    public function index()
     {
         $blogs = DB::table('blogs')->select('id, title, description, cover, status')->all();
         return view('blogs.index', ['blogs' => $blogs]);
@@ -21,6 +21,11 @@ class BlogController extends Controller
     public function create(): bool|string
     {
         return view('blogs.create');
+    }
+
+    public function show()
+    {
+        $blog = DB::table('blogs')->first();
     }
 
     public function store()

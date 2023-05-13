@@ -2,7 +2,8 @@
 
 namespace System;
 
-use mysqli;
+use PDO;
+use PDOException;
 
 class DB
 {
@@ -10,7 +11,7 @@ class DB
     private string $dbName = "core_project";
     private string $username = "root";
     private string $password = "";
-    private static $conn;
+    private static PDO $conn;
     private static string $table;
     private static string $query;
     private static bool $select = false;
@@ -20,9 +21,14 @@ class DB
 
     public function __construct()
     {
-        self::$conn = new mysqli($this->serverName, $this->username, $this->password, $this->dbName);
-        if (self::$conn->connect_error)
-            die("Connection failed: " .  self::$conn->connect_error);
+        try {
+            self::$conn = new PDO("mysql:host=$this->serverName;dbname=$this->dbName", $this->username, $this->password);
+            // set the PDO error mode to exception
+            self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//            echo "Connected successfully";
+        }catch(PDOException $e){
+            echo "Connection failed: " . $e->getMessage();
+        }
     }
 
     public static function table(string $name): DB
@@ -74,9 +80,14 @@ class DB
         return trim(htmlspecialchars(self::$query));
     }
 
-    public static function all(): \mysqli_result|bool
+    public static function all()
     {
-        return self::$conn->query(self::prepareSql());
+        return self::$conn->query(self::prepareSql())->fetchAll();
+    }
+
+    public function first()
+    {
+        return self::$conn->query(self::prepareSql())->fetch();
     }
 
     public static function create($request)
