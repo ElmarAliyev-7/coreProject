@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><?=$blog['title'];?></h5>
                     <p class="card-text"><?=str_limit($blog['description'], 200, '...');?></p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="http://localhost:8080/blogs/show/<?=$blog['id'];?>" class="btn btn-primary">Show More</a>
                 </div>
             </div>
         <?php endforeach; ?>

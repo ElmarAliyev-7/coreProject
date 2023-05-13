@@ -2,7 +2,6 @@
 <h1 class="text-center">Blogs Table</h1>
     <div class="table-responsive">
         <table class="table">
-            <caption>List of blogs</caption>
             <thead>
             <tr>
                 <th scope="col">#</th>

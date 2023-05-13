@@ -80,14 +80,14 @@ class DB
         return trim(htmlspecialchars(self::$query));
     }
 
-    public static function all()
+    public static function all(): array
     {
-        return self::$conn->query(self::prepareSql())->fetchAll();
+        return self::$conn->query(self::prepareSql())->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function first()
+    public function first(): array
     {
-        return self::$conn->query(self::prepareSql())->fetch();
+        return self::$conn->query(self::prepareSql())->fetch(PDO::FETCH_ASSOC);
     }
 
     public static function create($request)
