@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use System\DB;
+use App\Http\Traits\MediaTrait;
 
 class BlogController extends Controller
 {
@@ -52,13 +53,24 @@ class BlogController extends Controller
         endif;
 
         if($ok) :
+            // Insert Data
             $data = [];
             $data['title'] = $request['title'];
             $data['description'] = $request['description'];
             $data['cover'] = $request['cover'];
             $data['status'] = (isset($request['status']) and $request['status'] == 'on') ? 1 : 0;
-            $result = DB::table('blogs')->create($data);
-            return ($result) ? 'Blog created successfully' : 'Error Occurred';
+            $insert = DB::table('blogs')->create($data);
+
+            // Upload Cover
+            $upload = (new MediaTrait)
+                ->uploadImage($_FILES["cover"]["name"], $_FILES["cover"]["tmp_name"],
+                    $_FILES["cover"]["size"],"storage/uploads/blogs");
+
+            if($insert and $upload['uploadOk']) :
+                return 'Blog created successfully';
+            else :
+                return $upload['messages'][0];
+            endif;
         else :
             return $messages[0];
         endif;
