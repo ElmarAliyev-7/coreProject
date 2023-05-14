@@ -35,7 +35,7 @@ class BlogController extends Controller
         return view('blogs.show', ['blog' => $blog]);
     }
 
-    public function store(): string
+    public function store()
     {
         $ok = 1;
         $messages = [];
@@ -67,12 +67,12 @@ class BlogController extends Controller
                     $_FILES["cover"]["size"],"storage/uploads/blogs");
 
             if($insert and $upload['uploadOk']) :
-                return 'Blog created successfully';
+                return ['status' => 1, 'message' => 'Blog created successfully'];
             else :
-                return $upload['messages'][0];
+                return ['status' => 0, 'message' => $messages[0]];
             endif;
         else :
-            return $messages[0];
+            return ['status' => 0, 'message' => $messages[0]];
         endif;
     }
 }

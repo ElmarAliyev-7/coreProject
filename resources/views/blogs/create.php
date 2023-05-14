@@ -1,13 +1,16 @@
-<?php
-include_once 'resources/views/layouts/header.php';
-
-if(isset($_POST['submit'])) :
-    $result = storeBlog();
-    echo $result;
-endif;
-?>
+<?php include_once 'resources/views/layouts/header.php'; ?>
     <h1 class="text-center">Create Blog Page</h1>
     <div class="container my-1">
+        <?php
+        if(isset($_POST['submit'])) :
+            $result = storeBlog();
+            if($result['status']) :
+                echo "<div class='alert alert-success'>" . $result["message"] . "</div>";
+            else :
+                echo "<div class='alert alert-danger'>" . $result["message"] . "</div>";
+            endif;
+        endif;
+        ?>
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Title</label>

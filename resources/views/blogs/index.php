@@ -18,7 +18,7 @@
                     <th scope="row"><?=$blog['id'];?></th>
                     <td><?=$blog['title'];?></td>
                     <td><?=str_limit($blog['description'], 20);?></td>
-                    <td><img src="<?=$blog['cover'];?>" alt="Cover image" height="100px" width="100px"></td>
+                    <td><img src="<?=baseUrl. '/storage/uploads/blogs' .$blog['cover'];?>" alt="Cover image" height="100px" width="100px"></td>
                     <td><?=$blog['status'];?></td>
                     <td>Delete | Edit</td>
                 </tr>
