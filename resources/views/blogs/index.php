@@ -12,7 +12,7 @@ if(isset($_POST['delete'])) :
 endif;
 ?>
 
-<h1 class="text-center">Blogs Table</h1>
+<h1 class="text-center">All Blogs</h1>
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -43,6 +43,4 @@ endif;
             </tbody>
         </table>
     </div>
-<h1 class="text-center">All Blogs</h1>
-<?php include_once 'resources/views/widgets/blogs.php'; ?>
 <?php include_once 'resources/views/layouts/footer.php'; ?>
