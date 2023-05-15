@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use JetBrains\PhpStorm\ArrayShape;
 use Exception;
 use System\DB;
+use System\Request;
 use App\Http\Traits\MediaTrait;
 
 class BlogController extends Controller
@@ -43,7 +44,7 @@ class BlogController extends Controller
     {
         $ok = 1;
         $messages = [];
-        $request = parent::request();
+        $request = Request::get();
 
         if(empty($request['title'])) :
             $ok = 0;
@@ -58,17 +59,18 @@ class BlogController extends Controller
 
         if($ok) :
             $target_dir = "storage/uploads/blogs/";
+            $file_name = strtotime("now") . $_FILES["cover"]["name"];
             // Insert Data
             $data = [];
             $data['title'] = $request['title'];
             $data['description'] = $request['description'];
-            $data['cover'] = $target_dir . $request['cover'];
+            $data['cover'] = $target_dir . $file_name;
             $data['status'] = (isset($request['status']) and $request['status'] == 'on') ? 1 : 0;
             $insert = DB::table('blogs')->create($data);
 
             // Upload Cover
             $upload = (new MediaTrait)
-                ->uploadImage($_FILES["cover"]["name"], $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
+                ->uploadImage($file_name, $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
 
             if($insert and $upload['uploadOk']) :
                 return ['status' => 1, 'message' => 'Blog created successfully'];
