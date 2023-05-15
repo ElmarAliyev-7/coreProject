@@ -25,11 +25,13 @@ class DB
     public function __construct()
     {
         try {
-            self::$conn = new PDO("mysql:host=$this->serverName;dbname=$this->dbName", $this->username, $this->password);
-            // set the PDO error mode to exception
-            self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            if(empty(self::$conn)) {
+                self::$conn = new PDO("mysql:host=$this->serverName;dbname=$this->dbName", $this->username, $this->password);
+                // set the PDO error mode to exception
+                self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //            echo "Connected successfully";
-        }catch(PDOException $e){
+            }
+        }catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
