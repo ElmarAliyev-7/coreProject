@@ -19,6 +19,9 @@ class DB
     private static bool $where = false;
     private static array $conditions;
 
+    /**
+     * DB constructor.
+     */
     public function __construct()
     {
         try {
@@ -31,12 +34,20 @@ class DB
         }
     }
 
+    /**
+     * @param string $name
+     * @return DB
+     */
     public static function table(string $name): DB
     {
         self::$table = $name;
         return new self();
     }
 
+    /**
+     * @param string $columns
+     * @return DB
+     */
     public static function select(string $columns): DB
     {
         self::$select = true;
@@ -45,6 +56,10 @@ class DB
         return new self();
     }
 
+    /**
+     * @param array $conditions
+     * @return DB
+     */
     public static function where(array $conditions): DB
     {
         self::$where = true;
@@ -68,6 +83,9 @@ class DB
         return new self();
     }
 
+    /**
+     * @return string
+     */
     public static function prepareSql(): string
     {
         if(self::$select === true && self::$where === false) :
@@ -80,16 +98,26 @@ class DB
         return trim(htmlspecialchars(self::$query));
     }
 
+    /**
+     * @return array
+     */
     public static function all(): array
     {
         return self::$conn->query(self::prepareSql())->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function first(): array
+    /**
+     * @return array|bool
+     */
+    public function first(): array|bool
     {
         return self::$conn->query(self::prepareSql())->fetch(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * @param array $request
+     * @return bool
+     */
     public static function create(array $request): bool
     {
         // Get columns name as string
@@ -107,5 +135,16 @@ class DB
         $sql = "INSERT INTO " . self::$table . " ($columns) VALUES ($values)";
         $stmt = self::$conn->prepare($sql);
         return $stmt->execute($execute_data);
+    }
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public static function delete(int $id): bool
+    {
+        $sql = "DELETE FROM " . self::$table . " WHERE id=?";
+        $stmt= self::$conn->prepare($sql);
+        return $stmt->execute([$id]);
     }
 }

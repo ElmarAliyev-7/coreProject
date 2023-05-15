@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use JetBrains\PhpStorm\ArrayShape;
+use Exception;
 use System\DB;
 use App\Http\Traits\MediaTrait;
 
@@ -35,7 +37,9 @@ class BlogController extends Controller
         return view('blogs.show', ['blog' => $blog]);
     }
 
-    public function store()
+
+    #[ArrayShape(['status' => "int", 'message' => "string"])]
+    public function store(): array
     {
         $ok = 1;
         $messages = [];
@@ -53,18 +57,18 @@ class BlogController extends Controller
         endif;
 
         if($ok) :
+            $target_dir = "storage/uploads/blogs/";
             // Insert Data
             $data = [];
             $data['title'] = $request['title'];
             $data['description'] = $request['description'];
-            $data['cover'] = $request['cover'];
+            $data['cover'] = $target_dir . $request['cover'];
             $data['status'] = (isset($request['status']) and $request['status'] == 'on') ? 1 : 0;
             $insert = DB::table('blogs')->create($data);
 
             // Upload Cover
             $upload = (new MediaTrait)
-                ->uploadImage($_FILES["cover"]["name"], $_FILES["cover"]["tmp_name"],
-                    $_FILES["cover"]["size"],"storage/uploads/blogs");
+                ->uploadImage($_FILES["cover"]["name"], $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
 
             if($insert and $upload['uploadOk']) :
                 return ['status' => 1, 'message' => 'Blog created successfully'];
@@ -74,5 +78,18 @@ class BlogController extends Controller
         else :
             return ['status' => 0, 'message' => $messages[0]];
         endif;
+    }
+
+    #[ArrayShape(['status' => "int", 'message' => "string"])]
+    public function destroy(int $id): array
+    {
+        try {
+            $blog = DB::table('blogs')->where(['id' => $id])->first();
+            (new MediaTrait)->deleteImage($blog['cover']);
+            DB::table('blogs')->delete($id);
+            return ['status' => 1, 'message' => 'Blog Deleted Successfully'];
+        }catch (Exception $e) {
+            return ['status' => 0, 'message' => $e->getMessage()];
+        }
     }
 }

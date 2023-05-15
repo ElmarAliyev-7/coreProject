@@ -1,4 +1,17 @@
-<?php include_once 'resources/views/layouts/header.php'; ?>
+<?php
+include_once 'resources/views/layouts/header.php';
+
+if(isset($_POST['delete'])) :
+    $result = destroyBlog($_POST['delete']);
+    if($result['status']) :
+        echo "<div class='alert alert-success'>" . $result['message'] . "</div>";
+    else :
+        echo "<div class='alert alert-danger'>" . $result['message'] . "</div>";
+    endif;
+    header("Refresh:1");
+endif;
+?>
+
 <h1 class="text-center">Blogs Table</h1>
     <div class="table-responsive">
         <table class="table">
@@ -18,9 +31,13 @@
                     <th scope="row"><?=$blog['id'];?></th>
                     <td><?=$blog['title'];?></td>
                     <td><?=str_limit($blog['description'], 20);?></td>
-                    <td><img src="<?=baseUrl. '/storage/uploads/blogs' .$blog['cover'];?>" alt="Cover image" height="100px" width="100px"></td>
+                    <td><img src="<?=baseUrl . "/" . $blog['cover'];?>" alt="Cover image" height="100px" width="100px"></td>
                     <td><?=$blog['status'];?></td>
-                    <td>Delete | Edit</td>
+                    <td>
+                        <form action="" method="post">
+                            <button name="delete" class="btn btn-danger" type="submit" value="<?=$blog['id'];?>">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach;?>
             </tbody>

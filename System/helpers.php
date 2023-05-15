@@ -1,5 +1,6 @@
 <?php
 
+use JetBrains\PhpStorm\ArrayShape;
 use System\View;
 use App\Http\Controllers\BlogController;
 
@@ -34,7 +35,22 @@ function str_limit(string $str, int $limit, string $ext = '..'): string
     return $str . $ext;
 }
 
-function storeBlog()
+/**
+ * @param mixed $data
+ */
+function dd(mixed $data)
+{
+    return die(var_dump($data));
+}
+
+#[ArrayShape(['status' => "int", 'message' => "string"])]
+function storeBlog(): array
 {
     return (new BlogController)->store();
+}
+
+#[ArrayShape(['status' => "int", 'message' => "string"])]
+function destroyBlog(int $id): array
+{
+    return (new BlogController)->destroy($id);
 }

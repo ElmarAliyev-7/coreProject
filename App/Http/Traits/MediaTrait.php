@@ -3,6 +3,7 @@
 namespace App\Http\Traits;
 
 use JetBrains\PhpStorm\ArrayShape;
+use Exception;
 
 class MediaTrait
 {
@@ -63,6 +64,22 @@ class MediaTrait
             }
         }
         return ['uploadOk' => $uploadOk, 'messages' => $messages];
+    }
+
+    /**
+     * @param string $file
+     * @return Exception|int
+     */
+    public function deleteImage(string $file): Exception|int
+    {
+        try {
+            if(file_exists($file)) {
+                unlink($file);
+            }
+            return 1;
+        } catch (Exception $e) {
+            return $e;
+        }
     }
 
 }
