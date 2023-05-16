@@ -11,7 +11,6 @@ if(isset($_POST['delete'])) :
     header("Refresh:1");
 endif;
 ?>
-
 <h1 class="text-center">All Blogs</h1>
     <div class="table-responsive">
         <table class="table">

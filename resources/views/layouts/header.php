@@ -44,10 +44,10 @@ const baseUrl = 'http://localhost:8080';
                     <input type="checkbox" id="nav-button">
                     <label for="nav-button" onclick></label>
                     <ul class="nav-container">
-                        <li><a href="#home" class="current">Home</a></li>
+                        <li><a href="<?=baseUrl;?>" class="current">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#work">Work</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="<?=baseUrl;?>/blogs">Blog</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
