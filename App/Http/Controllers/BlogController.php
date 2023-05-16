@@ -13,10 +13,9 @@ class BlogController extends Controller
     /**
      * @return bool|string
      */
-    public function index()
+    public function index(): bool|string
     {
-        $blogs = DB::table('blogs')->select('id', 'title', 'description', 'cover', 'status')->get();
-        return $blogs;
+        $blogs = DB::table('blogs')->all();
         return view('blogs.index', ['blogs' => $blogs]);
     }
 

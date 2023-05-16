@@ -17,7 +17,7 @@ class DB
     private static bool $select = false;
     private static string $columns;
     private static bool $where = false;
-    private static array $conditions;
+    private static array $conditions = [];
 
     /**
      * DB constructor.
@@ -47,10 +47,10 @@ class DB
     }
 
     /**
-     * @param string $columns
+     * @param string ...$params
      * @return DB
      */
-    public static function select(string ...$params)
+    public static function select(string ...$params): DB
     {
         $columns = '';
         foreach ($params as $param) :
@@ -68,26 +68,34 @@ class DB
      * @param array $conditions
      * @return DB
      */
-    public static function where(array $conditions): DB
+    public static function where(string|int|array ...$params): DB
     {
         self::$where = true;
-        self::$conditions = $conditions;
+        self::$conditions = $params;
 
+        //Check Select if exists
         if(self::$select) :
             self::select(self::$columns);
         else :
             self::$query = sprintf('SELECT * FROM %s', self::$table);
         endif;
 
-        if($conditions > 1) :
-            self::$query .= " WHERE";
+        //ADD WHERE STATEMENT
+        self::$query .= " WHERE ";
+        if(count($params) == 1) : // ->where(['title' => 'OOP', 'status' => 1])
+            foreach ($params[0] as $key => $value) :
+                $value = !is_int($value) ? "'$value'" : $value;
+                self::$query .= $key . "=" . $value . " AND ";
+            endforeach;
+            self::$query = substr(trim(self::$query), 0, -3);
+        elseif(count($params) == 2) : // ->where('status', 1)
+            $params[1] = !is_int($params[1]) ? "'$params[1]'" : $params[1];
+            self::$query .= $params[0] . "=" . $params[1];
+        elseif(count($params) == 3) : // ->where('status, '=!', 1)
+            $params[2] = !is_int($params[2]) ? "'$params[2]'" : $params[2];
+            self::$query .= $params[0] . $params[1] . $params[2];
         endif;
 
-        foreach ($conditions as $column => $value) :
-            $value = is_string($value) ? "'$value'" : $value;
-            self::$query .= "  $column = $value AND";
-        endforeach;
-        self::$query = substr(self::$query, 0, -3);
         return new self();
     }
 
@@ -96,13 +104,6 @@ class DB
      */
     public static function prepareSql(): string
     {
-        if(self::$select === true && self::$where === false) :
-            self::select(self::$columns);
-        elseif(self::$where) :
-            self::where(self::$conditions);
-        else:
-            self::$query = sprintf('SELECT * FROM %s', self::$table);
-        endif;
         return trim(htmlspecialchars(self::$query));
     }
 
@@ -114,7 +115,7 @@ class DB
         return self::$conn->query(self::prepareSql())->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function all() : array
+    public static function all(): array
     {
         return self::$conn->query("SELECT * FROM " . self::$table)->fetchAll(PDO::FETCH_ASSOC);
     }

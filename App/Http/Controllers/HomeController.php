@@ -11,7 +11,8 @@ class HomeController extends Controller
      */
     public function index(): bool|string
     {
-        $blogs = DB::table('blogs')->select('id' , 'title', 'description', 'cover')->where(['status' => 1])->get();
+        $blogs = DB::table('blogs')->select('id' , 'title', 'description', 'cover')->get();
+        //->where(['status' => 1])
         return view('home', ['blogs' => $blogs]);
     }
 }
