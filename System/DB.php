@@ -103,9 +103,14 @@ class DB
     /**
      * @return array
      */
-    public static function all(): array
+    public static function get(): array
     {
         return self::$conn->query(self::prepareSql())->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function all() : array
+    {
+        return self::$conn->query("SELECT * FROM " . self::$table)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     /**

@@ -10,7 +10,7 @@ function homePage(): bool|string
 }
 
 // Define a function to handle the blogs page
-function blogsPage(): bool|string
+function blogsPage()
 {
     $blogs = new BlogController();
     return print_r($blogs->index());
