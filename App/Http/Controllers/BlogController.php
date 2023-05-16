@@ -15,7 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = DB::table('blogs')->select('id, title, description, cover, status')->get();
+        $blogs = DB::table('blogs')->select('id', 'title', 'description', 'cover', 'status')->get();
+        return $blogs;
         return view('blogs.index', ['blogs' => $blogs]);
     }
 

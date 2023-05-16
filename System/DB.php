@@ -32,7 +32,7 @@ class DB
 //            echo "Connected successfully";
             }
         }catch(PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+            return die("Connection failed: " . $e->getMessage());
         }
     }
 
@@ -50,8 +50,14 @@ class DB
      * @param string $columns
      * @return DB
      */
-    public static function select(string $columns): DB
+    public static function select(string ...$params)
     {
+        $columns = '';
+        foreach ($params as $param) :
+            $columns .= "$param" . ",";
+        endforeach;
+        $columns = substr($columns, 0, -1);
+
         self::$select = true;
         self::$columns = $columns;
         self::$query = sprintf('SELECT '. $columns .' FROM %s', self::$table);
