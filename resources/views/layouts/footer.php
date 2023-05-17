@@ -1,102 +1,82 @@
-<!-- Footer -->
-<footer class="wrap">
-    <div class="grid grid-pad" >
-        <div class="col-1-4">
-            <div class="content">
-                <div class="footer-widget">
-                    <h3>About</h3>
-                    <div class="textwidget">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p><br>
-                        <p>Et dolore magna aliquyam erat sed diam voluptua.</p>
-                    </div>
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">About</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="col-1-4" >
-            <div class="content">
-                <div class="footer-widget">
-                    <h3>Recent Posts</h3>
-                    <div class="fwidget">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Services</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
                         <ul>
-                            <li><a href="#0">Suspendisse nec lectus non</a></li>
-                            <li><a href="#0">Phasellus euismod pulvinar</a></li>
-                            <li><a href="#0">Aliquam erat volutpat</a></li>
-                            <li><a href="#0">Phasellus euismod pulvinar</a></li>
-                            <li><a href="#0">Aliquam erat volutpat</a></li>
+                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-1-4" >
-            <div class="content">
-                <div class="footer-widget">
-                    <h3>More info</h3>
-                    <div class="textwidget">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-                        <br>
-                        <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-1-4" >
-            <div class="content">
-                <div class="footer-widget">
-                    <h3>Flickr Feed</h3>
-                    <div class="flickr-widget">
-                        <ul class="flickr-list">
-                            <li><a href="#0"><img src="images/flickr-widget/flickr1.jpg" alt=""></a></li>
-                            <li><a href="#0"><img src="images/flickr-widget/flickr2.jpg" alt=""></a></li>
-                            <li><a href="#0"><img src="images/flickr-widget/flickr3.jpg" alt=""></a></li>
-                            <li><a href="#0"><img src="images/flickr-widget/flickr4.jpg" alt=""></a></li>
-                            <li><a href="#0"><img src="images/flickr-widget/flickr5.jpg" alt=""></a></li>
-                            <li><a href="#0"><img src="images/flickr-widget/flickr6.jpg" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="social-footer">
-        <div class="grid grid-pad">
-            <div class="col-1-1" >
-                <div class="content">
-                    <div class="social-set">
-                        <a  href="#0"><i class="icon-facebook"></i></a>
-                        <a  href="#0"><i class="icon-twitter"></i></a>
-                        <a  href="#0"><i class="icon-linkedin2"></i></a>
-                        <a  href="#0"><i class="icon-dribbble4"></i></a>
-                        <a  href="#0"><i class="icon-instagram"></i></a>
-                    </div>
-                    <p class="source-org copyright">© 2016 | All Rights Reserved Created By <a href="http://templatestock.co">Template Stock</a></p>
-                </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
     </div>
 </footer>
-<!-- End Footer -->
 
-<div class="loader-overlay">
-    <div class="loader">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-</div>
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-<!-- JS -->
-<script src="<?=baseUrl;?>/public/front/js/jquery.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/popper.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/bootstrap.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery.easing.1.3.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery.waypoints.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery.stellar.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/owl.carousel.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery.magnific-popup.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/aos.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/jquery.animateNumber.min.js"></script>
+<script src="<?=baseUrl;?>/public/front/js/scrollax.min.js"></script>
+
 <script src="<?=baseUrl;?>/public/front/js/main.js"></script>
-<script src="<?=baseUrl;?>/public/front/js/mixitup.js"></script>
-<script src="<?=baseUrl;?>/public/front/js/smoothscroll.js"></script>
-<script src="<?=baseUrl;?>/public/front/js/jquery.nav.js"></script>
-<script src="<?=baseUrl;?>/public/front/js/owl-carousel/owl.carousel.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<script src="<?=baseUrl;?>/public/front/js/jquery.counterup.min.js"></script>
-<script src="<?=baseUrl;?>/public/front/js/lightcase.min.js"></script>
+
 </body>
 </html>

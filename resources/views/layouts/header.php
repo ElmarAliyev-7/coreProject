@@ -2,59 +2,51 @@
 require_once 'System/helpers.php';
 const baseUrl = 'http://localhost:8080';
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>The7 Free HTML5 Responsive Template | Template Stock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/reset.css">
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/simplegrid.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/animate.css">
+
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/aos.css">
+
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/flaticon.css">
     <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/icomoon.css">
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/lightcase.css">
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/js/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/js/owl-carousel/owl.theme.css" />
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/js/owl-carousel/owl.transitions.css" />
-    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/style.css">
-
-    <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="<?=baseUrl;?>/public/front/css/style.css">
 </head>
-<body id="home">
-<!-- Header -->
-<header id="top-header" class="header-home">
-    <div class="grid">
-        <div class="col-1-1">
-            <div class="content">
-                <div class="logo-wrap">
-                    <a href="#0" class="logo">The7</a>
-                </div>
-                <nav class="navigation">
-                    <input type="checkbox" id="nav-button">
-                    <label for="nav-button" onclick></label>
-                    <ul class="nav-container">
-                        <li><a href="<?=baseUrl;?>" class="current">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="<?=baseUrl;?>/blogs">Blog</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Clark</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+                <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+                <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+                <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+            </ul>
         </div>
     </div>
-</header>
-<!-- End Header -->
+</nav>

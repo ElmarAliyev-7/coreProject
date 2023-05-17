@@ -1,569 +1,567 @@
 <?php include_once 'resources/views/layouts/header.php'; ?>
-    <!-- Parallax Section -->
-    <div class="parallax-section parallax1">
-        <div class="grid grid-pad">
-            <div class="col-1-1">
-                <div class="content content-header" >
-                    <h2>We Are Creative Design Agency</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, fuga, consectetur sequi consequuntur nisi placeat ullam maiores perferendis. Quod, nihil reiciendis saepe optio libero minus et beatae ipsam reprehenderit sequi.</p>
-                    <a target="_blank" class="btn btn-ghost" href="#">Find Out More</a>
+
+    <section id="home-section" class="hero">
+        <div class="home-slider  owl-carousel">
+            <div class="slider-item ">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(<?=baseUrl;?>/public/front/images/bg_1.png);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Hello!</span>
+                                <h1 class="mb-4 mt-3">I'm <span>Clark Thompson</span></h1>
+                                <h2 class="mb-4">A Freelance Web Designer</h2>
+                                <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(<?=baseUrl;?>/public/front/images/bg_2.png);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Hello!</span>
+                                <h1 class="mb-4 mt-3">I'm a <span>web designer</span> based in London</h1>
+                                <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 col-lg-5 d-flex">
+                    <div class="img-about img d-flex align-items-stretch">
+                        <div class="overlay"></div>
+                        <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/bg_1.png);">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                    <div class="row justify-content-start pb-3">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h1 class="big">About</h1>
+                            <h2 class="mb-4">About Me</h2>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <ul class="about-info mt-4 px-md-0 px-2">
+                                <li class="d-flex"><span>Name:</span> <span>Clark Thompson</span></li>
+                                <li class="d-flex"><span>Date of birth:</span> <span>January 01, 1987</span></li>
+                                <li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li>
+                                <li class="d-flex"><span>Zip code:</span> <span>1000</span></li>
+                                <li class="d-flex"><span>Email:</span> <span>clarkthomp@gmail.com</span></li>
+                                <li class="d-flex"><span>Phone: </span> <span>+1-2234-5678-9-0</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                        <div class="text">
+                            <p class="mb-4">
+                                <span class="number" data-number="120">0</span>
+                                <span>Project complete</span>
+                            </p>
+                            <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Resume</h1>
+                    <h2 class="mb-4">Resume</h2>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2014-2015</span>
+                        <h2>Master Degree of Design</h2>
+                        <span class="position">Cambridge University</span>
+                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    </div>
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2014-2015</span>
+                        <h2>Bachelor's Degree of C.A</h2>
+                        <span class="position">Cambridge University</span>
+                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    </div>
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2014-2015</span>
+                        <h2>Diploma in Computer</h2>
+                        <span class="position">Cambridge University</span>
+                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2014-2015</span>
+                        <h2>Art &amp; Creative Director</h2>
+                        <span class="position">Cambridge University</span>
+                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    </div>
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2014-2015</span>
+                        <h2>Wordpress Developer</h2>
+                        <span class="position">Cambridge University</span>
+                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    </div>
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2017-2018</span>
+                        <h2>UI/UX Designer</h2>
+                        <span class="position">Cambridge University</span>
+                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 text-center ftco-animate">
+                    <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Parallax Section -->
+    </section>
 
-    <!-- CurveUp -->
-    <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
-
-    <!-- Services Section -->
-    <div class="wrap services-wrap" id="services">
-        <section class="grid grid-pad services">
-            <h2>Our Services</h2>
-            <div class="col-1-4 service-box service-1" >
-                <div class="content">
-                    <div class="service-icon">
-                        <i class="circle-icon icon-heart4"></i>
-                    </div>
-                    <div class="service-entry">
-                        <h3>Lovely Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tellus eget libero pretium, sollicitudin feugiat libero.</p>
-                        <a class="btn read-more" href="#0">Read More</a>
-                    </div>
+    <section class="ftco-section" id="services-section">
+        <div class="container">
+            <div class="row justify-content-center py-5 mt-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Services</h1>
+                    <h2 class="mb-4">Services</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
                 </div>
             </div>
-            <div class="col-1-4 service-box service-2" >
-                <div class="content">
-                    <div class="service-icon">
-                        <i class="circle-icon icon-star4"></i>
-                    </div>
-                    <div class="service-entry">
-                        <h3>Great Concept</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tellus eget libero pretium, sollicitudin feugiat libero.</p>
-                        <a class="btn read-more" href="#0">Read More</a>
-                    </div>
+            <div class="row">
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+                        <div class="desc">
+                            <h3 class="mb-5">Web Design</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+                        <div class="desc">
+                            <h3 class="mb-5">Phtography</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+                        <div class="desc">
+                            <h3 class="mb-5">Web Developer</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+                        <div class="desc">
+                            <h3 class="mb-5">App Developing</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+                        <div class="desc">
+                            <h3 class="mb-5">Branding</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+                        <div class="desc">
+                            <h3 class="mb-5">Product Strategy</h3>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-1-4 service-box service-3">
-                <div class="content">
-                    <div class="service-icon">
-                        <i class="circle-icon icon-display"></i>
-                    </div>
-                    <div class="service-entry">
-                        <h3>Development</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tellus eget libero pretium, sollicitudin feugiat libero.</p>
-                        <a class="btn read-more" href="#0">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-1-4 service-box service-4" >
-                <div class="content">
-                    <div class="service-icon">
-                        <i class="circle-icon icon-user6"></i>
-                    </div>
-                    <div class="service-entry">
-                        <h3>User Friendly</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tellus eget libero pretium, sollicitudin feugiat libero.</p>
-                        <a class="btn read-more" href="#0">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- End Services Section -->
-
-    <!-- CurveDown -->
-    <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-    </svg>
-
-    <!-- Work Section -->
-    <div class="wrap grey recent-wrap" id="work">
-        <section class="grid grid-pad">
-            <h2>Recent Work</h2>
-            <!-- Start of Filter section -->
-            <div class="col-1-1 mix">
-                <ul class="filters" >
-                    <li class="filter active" data-filter="all">All</li>
-                    <li class="filter" data-filter=".illustration">Illustration</li>
-                    <li class="filter" data-filter=".web-design">Web Design</li>
-                    <li class="filter" data-filter=".photography">Photography</li>
-                </ul>
-            </div>
-            <!-- End of Filter section -->
-            <div class="portfolio-items" >
-                <div class="col-1-3 mix illustration">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/1-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Illustration</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:illustration" title="Asian tourist - Illustration" href="images/work/1-big.jpg">Asian tourist</a></h2>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix photography">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/5-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Photography</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:photography" title="Blue flowers - Photography" href="images/work/5-big.jpg">Blue flowers</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix illustration">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/2-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Illustration</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:illustration" title="Batman Wannabe - Illustration" href="images/work/2-big.jpg">Batman Wannabe</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix photography">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/8-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Photography</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:photography" title="Big city and dreams - Photography" href="images/work/8-big.jpg">Big city and dreams</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix web-design">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/6-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Web Design</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:webdesign" title="Minimal nature - Web Design" href="images/work/6-big.jpg">Minimal nature</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix web-design">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/3-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Illustration</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:illustration" title="Jack the sailor - Illustration" href="images/work/3-big.jpg">Jack the sailor</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix photography">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/7-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Photography</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:photography" title="Enjoy live - Photography" href="images/work/7-big.jpg">Enjoy live</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix illustration">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/4-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Illustration</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:illustration" title="Run kitty run - Photography" href="images/work/4-big.jpg">Run kitty run</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3 mix illustration">
-                    <div class="content">
-                        <div class="recent-work">
-                            <img src="images/work/9-small.jpg" alt="">
-                            <div class="overlay">
-                                <span>Web Design</span>
-                                <h2><a class="img-wrap" data-rel="lightcase:webdesign" title="Would you? - Web Design" href="images/work/9-big.jpg">Would you?</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-1-1"><a class="btn" href="#0">View More</a></div>
-
-        </section>
-    </div>
-    <!-- End Work Section -->
-
-    <!-- CurveUp -->
-    <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
-
-    <!-- Quotes Section -->
-    <div class="wrap services-wrap" >
-        <section class="grid grid-pad">
-            <div class="col-1-1 service-box cl-client-carousel-container">
-                <div class="content">
-                    <div class="cl-client-carousel">
-
-                        <div class="item client-carousel-item"><!-- Start of item -->
-                            <div class="quotes-icon">
-                                <i class="icon-quotes-left"></i>
-                            </div>
-                            <p>The7 is an extraordinary, awesome Theme, I would recommend this Theme to anyone for their next project. Go ahead and download it now!</p>
-                            <h4>-David Bell</h4>
-                        </div><!-- End of item -->
-
-                        <div class="item client-carousel-item"><!-- Start of item -->
-                            <div class="quotes-icon">
-                                <i class="icon-quotes-left"></i>
-                            </div>
-                            <p>The good times are for those who take action. The7 is a simple and easy to use template for creative people. Download this theme and give it a try!</p>
-                            <h4>-Eve Stinger</h4>
-                        </div><!-- End of item -->
-                        <div class="item client-carousel-item"><!-- Start of item -->
-                            <div class="quotes-icon">
-                                <i class="icon-quotes-left"></i>
-                            </div>
-                            <p>Awesome theme! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt possimus eveniet aperiam, minus deleniti iure ipsa praesentium amet, labore voluptatum fugit earum, porro non sequi sint soluta reprehenderit ad?</p>
-                            <h4>-Will Peters</h4>
-                        </div><!-- End of item -->
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- End Quotes Section -->
-
-    <!-- CurveDown -->
-    <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-    </svg>
-
-    <!-- Blog Section -->
-    <?php include_once "widgets/blogs.php";?>
-    <!-- End Blog Section -->
-
-    <!-- Parallax Section - Counter -->
-    <div class="parallax-section parallax2">
-        <div class="wrap">
-            <section class="grid grid-pad callout">
-                <div class="col-1-3">
-                    <div class="content" >
-                        <div class="info-counter">
-                            <div class="info-counter-row">
-                                <i class="info-counter-icon icon-mug"></i>
-                            </div>
-                            <div class="info-counter-content">
-                                <h5 class="info-counter-number">
-                                    <span class="counter">55</span>
-                                    <span class="info-counter-units">Cups</span>
-                                </h5>
-                                <div class="info-counter-text">Average weekly coffee drank</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1-3">
-                    <div class="content" >
-                        <div class="info-counter">
-                            <div class="info-counter-row">
-                                <i class="info-counter-icon icon-embed"></i>
-                            </div>
-                            <div class="info-counter-content">
-                                <h5 class="info-counter-number">
-                                    <span class="counter">9000</span>
-                                    <span class="info-counter-units">Lines</span>
-                                </h5>
-                                <div class="info-counter-text">Average weekly lines of code</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-1-3">
-                    <div class="content" >
-                        <div class="info-counter">
-                            <div class="info-counter-row">
-                                <i class="info-counter-icon icon-trophy"></i>
-                            </div>
-                            <div class="info-counter-content">
-                                <h5 class="info-counter-number">
-                                    <span class="counter">400</span>
-                                    <span class="info-counter-units">Customers</span>
-                                </h5>
-                                <div class="info-counter-text">Average yearly happy clients</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
-    </div>
-    <!-- End Parallax Section -->
+    </section>
 
-    <!-- CurveUp -->
-    <svg class="curveUpColor curveGrey" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
 
-    <!-- Team Section -->
-    <div class="wrap team-wrap grey" id="team">
-        <div class="grid grid-pad">
-            <div class="content" >
-                <h2>Our Team</h2>
-                <div class="col-1-4" >
-                    <div class="content staff-content">
-                        <div class="recent-work staff-img">
-                            <div class="img-wrap staff-img">
-                                <img src="images/team/user2.png" alt="">
-                                <div class="team-social">
-                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
-                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
-                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
-                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
+    <section class="ftco-section" id="skills-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Skills</h1>
+                    <h2 class="mb-4">My Skills</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 animate-box">
+                    <div class="progress-wrap ftco-animate">
+                        <h3>Photoshop</h3>
+                        <div class="progress">
+                            <div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box">
+                    <div class="progress-wrap ftco-animate">
+                        <h3>jQuery</h3>
+                        <div class="progress">
+                            <div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box">
+                    <div class="progress-wrap ftco-animate">
+                        <h3>HTML5</h3>
+                        <div class="progress">
+                            <div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box">
+                    <div class="progress-wrap ftco-animate">
+                        <h3>CSS3</h3>
+                        <div class="progress">
+                            <div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box">
+                    <div class="progress-wrap ftco-animate">
+                        <h3>WordPress</h3>
+                        <div class="progress">
+                            <div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box">
+                    <div class="progress-wrap ftco-animate">
+                        <h3>SEO</h3>
+                        <div class="progress">
+                            <div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="ftco-section ftco-project" id="projects-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Projects</h1>
+                    <h2 class="mb-4">Our Projects</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.jpg);">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+                            <span>Web Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.jpg);">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+                            <span>Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.jpg);">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+                            <span>Web Design</span>
+                        </div>
+                    </div>
+
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.jpg);">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+                            <span>Web Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.jpg);">
+                                <div class="overlay"></div>
+                                <div class="text text-center p-4">
+                                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+                                    <span>Web Design</span>
                                 </div>
                             </div>
-                            <div class="work-info staff-info">
-                                <h5>Tim Malkovic</h5>
-                                <span>CEO</span>
-                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-1-4" >
-                    <div class="content staff-content">
-                        <div class="recent-work staff-img">
-                            <div class="img-wrap staff-img">
-                                <img src="images/team/user1.png" alt="">
-                                <div class="team-social">
-                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
-                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
-                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
-                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
+                        <div class="col-md-12">
+                            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.jpg);">
+                                <div class="overlay"></div>
+                                <div class="text text-center p-4">
+                                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+                                    <span>Web Design</span>
                                 </div>
                             </div>
-                            <div class="work-info staff-info">
-                                <h5>David Bell</h5>
-                                <span>Creative Designer</span>
-                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="col-1-4" >
-                    <div class="content staff-content">
-                        <div class="recent-work staff-img">
-                            <div class="img-wrap staff-img">
-                                <img src="images/team/user3.png" alt="">
-                                <div class="team-social">
-                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
-                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
-                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
-                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="work-info staff-info">
-                                <h5>Eve Stinger</h5>
-                                <span>Sales Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-1-4" >
-                    <div class="content staff-content">
-                        <div class="recent-work staff-img">
-                            <div class="img-wrap staff-img">
-                                <img src="images/team/user4.png" alt="">
-                                <div class="team-social">
-                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
-                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
-                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
-                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="work-info staff-info">
-                                <h5>Will Peters</h5>
-                                <span>Developer</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Team Section -->
+    </section>
 
-    <!-- CurveUp -->
-    <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
 
-    <!-- Clients Logos Section -->
-    <div class="wrap" >
-        <div class="grid grid-pad">
-            <div class="col-1-1">
-                <div class="content">
-                    <!-- Start of Carousel Container -->
-                    <div class="cl-logo-carousel col-sm-12">
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/1.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/2.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/3.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/4.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/5.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/1.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/2.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
-                        <div class="item"><!-- Start of item -->
-                            <a href="#">
-                                <figure>
-                                    <img src="images/clients/3.png" alt="" />
-                                </figure>
-                            </a>
-                        </div><!-- End of item -->
-
+    <section class="ftco-section" id="blog-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Blog</h1>
+                    <h2 class="mb-4">Our Blog</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center mb-3 meta">
+                                <p class="mb-0">
+                                    <span class="mr-2">June 21, 2019</span>
+                                    <a href="#" class="mr-2">Admin</a>
+                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                </p>
+                            </div>
+                            <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
                     </div>
-                    <!-- End of Carousel Container -->
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center mb-3 meta">
+                                <p class="mb-0">
+                                    <span class="mr-2">June 21, 2019</span>
+                                    <a href="#" class="mr-2">Admin</a>
+                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                </p>
+                            </div>
+                            <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry">
+                        <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center mb-3 meta">
+                                <p class="mb-0">
+                                    <span class="mr-2">June 21, 2019</span>
+                                    <a href="#" class="mr-2">Admin</a>
+                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                </p>
+                            </div>
+                            <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Clients Logos Section -->
+    </section>
 
-    <!-- CurveDown -->
-    <svg class="curveDownColor curveMapUp" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-    </svg>
-
-    <!-- Parallax Section -->
-    <div class="map">
-        <div class="wrap">
-            <section id="cd-google-map">
-                <div id="google-container"></div>
-                <div id="cd-zoom-in"></div>
-                <div id="cd-zoom-out"></div>
-            </section>
-        </div>
-    </div>
-    <!-- End Parallax Section -->
-
-    <!-- CurveUp -->
-    <svg class="curveUpColor curveMapDown" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
-
-    <!-- Contact Section -->
-    <div class="wrap contact" id="contact">
-        <div class="grid grid-pad" >
-            <h2>Contact</h2>
-            <div class="col-1-2" >
-                <div class="content address">
-                    <h3>Talk to us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iusto fugit esse soluta quae debitis quibusdam harum voluptatem, maxime, aliquam sequi. Tempora ipsum magni unde velit corporis fuga, necessitatibus blanditiis.</p>
-                    <address>
-                        <div>
-                            <div class="box-icon">
-                                <i class="icon-location"></i>
-                            </div>
-                            <span>Address:</span>
-                            <p>9983 City name, Street name, 232 Apartment C</p>
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row d-md-flex align-items-center">
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="100">0</strong>
+                            <span>Awards</span>
                         </div>
-
-                        <div>
-                            <div class="box-icon">
-                                <i class="icon-clock"></i>
-                            </div>
-                            <span>Work Time:</span>
-                            <p>Monday - Friday from 9am to 5pm</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="1200">0</strong>
+                            <span>Complete Projects</span>
                         </div>
-
-                        <div>
-                            <div class="box-icon">
-                                <i class="icon-phone"></i>
-                            </div>
-                            <span>Phone:</span>
-                            <p>595 12 34 567</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="1200">0</strong>
+                            <span>Happy Customers</span>
                         </div>
-                    </address>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="500">0</strong>
+                            <span>Cups of coffee</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-1-2 pleft-25" >
-                <div class="content contact-form">
-                    <form class="form">
-                        <input type="text" class="comment-name" placeholder="Name*" required>
-                        <input type="email" class="comment-email" placeholder="Email*" required>
-                        <input type="text" class="comment-subject" placeholder="Subject">
-                        <textarea class="required comment-text" placeholder="Message..." required></textarea>
-                        <input type="submit" value="Send Message" class="btn submit comment-submit">
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 ftco-animate text-center">
+                    <h2>I'm <span>Available</span> for freelancing</h2>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Contact</h1>
+                    <h2 class="mb-4">Contact Me</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                </div>
+            </div>
+
+            <div class="row d-flex contact-info mb-5">
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-map-signs"></span>
+                        </div>
+                        <h3 class="mb-4">Address</h3>
+                        <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-phone2"></span>
+                        </div>
+                        <h3 class="mb-4">Contact Number</h3>
+                        <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-paper-plane"></span>
+                        </div>
+                        <h3 class="mb-4">Email Address</h3>
+                        <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-globe"></span>
+                        </div>
+                        <h3 class="mb-4">Website</h3>
+                        <p><a href="#">yoursite.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters block-9">
+                <div class="col-md-6 order-md-last d-flex">
+                    <form action="#" class="bg-light p-4 p-md-5 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        </div>
                     </form>
+
+                </div>
+
+                <div class="col-md-6 d-flex">
+                    <div class="img" style="background-image: url(images/about.jpg);"></div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Contact Section -->
-
-    <!-- CurveDown -->
-    <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-    </svg>
+    </section>
 <?php include_once 'resources/views/layouts/footer.php'; ?>
