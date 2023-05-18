@@ -5,7 +5,7 @@ const baseUrl = 'http://localhost:8080';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Elmar Aliyev</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

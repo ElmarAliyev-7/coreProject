@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ {AuthController};
 use App\Http\Controllers\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
@@ -37,6 +38,13 @@ function aboutPage(): bool|string
     return print_r($about->index());
 }
 
+// Define a function to handle the about page
+function admin(): bool|string
+{
+    $admin = new AuthController();
+    return print_r($admin->login());
+}
+
 // Get the requested URL and Segments
 $requestUri = $_SERVER['REQUEST_URI'];
 $segments = explode('/', $_SERVER['REQUEST_URI']);
@@ -52,6 +60,8 @@ elseif($segments[1] === 'blogs' and $segments[2] === 'show'):
     blogShowPage($segments[3]);die();
 elseif($segments[1] === 'blogs' and $segments[2] === 'create') :
     createBlogPage();die();
+elseif($requestUri == '/admin') :
+    admin();die();
 else :
     // Handle 404 error
     header("HTTP/1.0 404 Not Found");
