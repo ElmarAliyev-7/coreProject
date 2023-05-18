@@ -309,7 +309,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.jpg);">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(<?=baseUrl;?>/public/front/images/project-4.jpg);">
                         <div class="overlay"></div>
                         <div class="text text-center p-4">
                             <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -318,7 +318,7 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.jpg);">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(<?=baseUrl;?>/public/front/images/project-5.jpg);">
                         <div class="overlay"></div>
                         <div class="text text-center p-4">
                             <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -328,7 +328,7 @@
                 </div>
 
                 <div class="col-md-8">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.jpg);">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(<?=baseUrl;?>/public/front/images/project-1.jpg);">
                         <div class="overlay"></div>
                         <div class="text text-center p-4">
                             <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -336,7 +336,7 @@
                         </div>
                     </div>
 
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.jpg);">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(<?=baseUrl;?>/public/front/images/project-6.jpg);">
                         <div class="overlay"></div>
                         <div class="text text-center p-4">
                             <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -347,7 +347,7 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.jpg);">
+                            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(<?=baseUrl;?>/public/front/images/project-2.jpg);">
                                 <div class="overlay"></div>
                                 <div class="text text-center p-4">
                                     <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -356,7 +356,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.jpg);">
+                            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(<?=baseUrl;?>/public/front/images/project-3.jpg);">
                                 <div class="overlay"></div>
                                 <div class="text text-center p-4">
                                     <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -370,71 +370,9 @@
         </div>
     </section>
 
-
-    <section class="ftco-section" id="blog-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-5">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Blog</h1>
-                    <h2 class="mb-4">Our Blog</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </div>
-            <div class="row d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-3 meta">
-                                <p class="mb-0">
-                                    <span class="mr-2">June 21, 2019</span>
-                                    <a href="#" class="mr-2">Admin</a>
-                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-3 meta">
-                                <p class="mb-0">
-                                    <span class="mr-2">June 21, 2019</span>
-                                    <a href="#" class="mr-2">Admin</a>
-                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry">
-                        <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-3 meta">
-                                <p class="mb-0">
-                                    <span class="mr-2">June 21, 2019</span>
-                                    <a href="#" class="mr-2">Admin</a>
-                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Blog Section -->
+    <?php include_once 'widgets/blogs.php';?>
+    <!-- End of section -->
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
         <div class="container">
@@ -475,7 +413,7 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(<?=baseUrl;?>/public/front/images/bg_1.jpg)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 ftco-animate text-center">
