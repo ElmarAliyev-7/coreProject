@@ -5,7 +5,11 @@
             <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
                 <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
                     <h1 class="mb-3 bread">Blog Single Post</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
+                    <p class="breadcrumbs">
+                        <span class="mr-2"><a href="<?=baseUrl;?>">Home <i class="ion-ios-arrow-forward"></i></a></span>
+                        <span class="mr-2"><a href="<?=baseUrl. '/blogs/show/'. $blog['id'];?>">Blog <i class="ion-ios-arrow-forward"></i></a></span>
+                        <span><?=$blog['title'];?></span>
+                    </p>
                 </div>
             </div>
         </div>

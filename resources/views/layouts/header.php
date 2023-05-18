@@ -28,10 +28,9 @@ const baseUrl = 'http://localhost:8080';
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target scrolled" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="<?=baseUrl;?>">Clark</a>
+        <a class="navbar-brand" href="<?=baseUrl;?>">Elmar</a>
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
