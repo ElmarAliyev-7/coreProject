@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
 use System\DB;
 
@@ -13,6 +13,6 @@ class HomeController extends Controller
     {
         $blogs = DB::table('blogs')->select('id' , 'title', 'description', 'cover')
             ->where('status', 1)->get();
-        return view('home', ['blogs' => $blogs]);
+        return view('front.home', ['blogs' => $blogs]);
     }
 }

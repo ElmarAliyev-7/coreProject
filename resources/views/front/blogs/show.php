@@ -1,4 +1,4 @@
-<?php include_once 'resources/views/layouts/header.php';?>
+<?php include_once 'resources/views/front/layouts/header.php';?>
     <section class="hero-wrap js-fullheight" style="background-image: url(<?=baseUrl;?>/public/front/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -246,4 +246,4 @@
             </div>
         </div>
     </section> <!-- .section -->
-<?php include_once "resources/views/layouts/footer.php";?>
+<?php include_once "resources/views/front/layouts/footer.php";?>

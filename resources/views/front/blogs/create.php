@@ -1,4 +1,4 @@
-<?php include_once 'resources/views/layouts/header.php'; ?>
+<?php include_once 'resources/views/front/layouts/header.php'; ?>
     <h1 class="text-center">Create Blog Page</h1>
     <div class="container my-1">
         <?php
@@ -31,4 +31,4 @@
             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-<?php include_once 'resources/views/layouts/footer.php'; ?>
+<?php include_once 'resources/views/front/layouts/footer.php'; ?>

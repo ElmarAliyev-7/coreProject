@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
 use JetBrains\PhpStorm\ArrayShape;
 use Exception;
@@ -16,7 +16,7 @@ class BlogController extends Controller
     public function index(): bool|string
     {
         $blogs = DB::table('blogs')->all();
-        return view('blogs.index', ['blogs' => $blogs]);
+        return view('front.blogs.index', ['blogs' => $blogs]);
     }
 
     /**
@@ -24,7 +24,7 @@ class BlogController extends Controller
      */
     public function create(): bool|string
     {
-        return view('blogs.create');
+        return view('front.blogs.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class BlogController extends Controller
     {
         $blog = DB::table('blogs')->where(['id' => $id])->first();
         $blog['status'] = ($blog['status'] == 1) ? 'Active' : 'Passive';
-        return view('blogs.show', ['blog' => $blog]);
+        return view('front.blogs.show', ['blog' => $blog]);
     }
 
 

@@ -1,5 +1,5 @@
 <?php
-include_once 'resources/views/layouts/header.php';
+include_once 'resources/views/front/layouts/header.php';
 
 if(isset($_POST['delete'])) :
     $result = destroyBlog($_POST['delete']);
@@ -41,4 +41,4 @@ endif;
         </tbody>
     </table>
 </div>
-<?php include_once 'resources/views/layouts/footer.php'; ?>
+<?php include_once 'resources/views/front/layouts/footer.php'; ?>

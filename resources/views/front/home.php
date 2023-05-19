@@ -1,4 +1,4 @@
-<?php include_once 'resources/views/layouts/header.php'; ?>
+<?php include_once 'resources/views/front/layouts/header.php'; ?>
     <?php include_once 'widgets/home.php';?>
     <?php include_once 'widgets/about.php';?>
     <?php include_once 'widgets/resume.php';?>
@@ -9,4 +9,4 @@
     <?php include_once 'widgets/counter.php';?>
     <?php include_once 'widgets/hire_me.php';?>
     <?php include_once 'widgets/contact.php';?>
-<?php include_once 'resources/views/layouts/footer.php'; ?>
+<?php include_once 'resources/views/front/layouts/footer.php'; ?>
