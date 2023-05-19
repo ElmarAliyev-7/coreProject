@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ {AuthController, Dashboard, BlogController as AdminBlogController};
-use App\Http\Controllers\{HomeController, AboutController, BlogController};
+use App\Http\Controllers\Front\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
 function homePage(): bool|string
