@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\ {AuthController};
+use App\Http\Controllers\Admin\ {AuthController, Dashboard};
 use App\Http\Controllers\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
@@ -45,6 +45,21 @@ function admin(): bool|string
     return print_r($admin->login());
 }
 
+// Define a function to handle the about page
+function logOut(): bool|string
+{
+    $admin = new AuthController();
+    return print_r($admin->logOut());
+}
+
+// Define a function to handle the about page
+function adminDashboard(): bool|string
+{
+    $dasboard = new Dashboard();
+    return print_r($dasboard->index());
+}
+
+
 // Get the requested URL and Segments
 $requestUri = $_SERVER['REQUEST_URI'];
 $segments = explode('/', $_SERVER['REQUEST_URI']);
@@ -60,8 +75,12 @@ elseif($segments[1] === 'blogs' and $segments[2] === 'show'):
     blogShowPage($segments[3]);die();
 elseif($segments[1] === 'blogs' and $segments[2] === 'create') :
     createBlogPage();die();
-elseif($requestUri == '/admin') :
+elseif($requestUri == '/admin' or $requestUri == '/admin/') :
     admin();die();
+elseif($requestUri == '/admin/dashboard' or $requestUri == '/admin/dashboard/') :
+    adminDashboard();die();
+elseif($requestUri == '/admin/logout' or $requestUri == '/admin/logout/') :
+    logOut();die();
 else :
     // Handle 404 error
     header("HTTP/1.0 404 Not Found");

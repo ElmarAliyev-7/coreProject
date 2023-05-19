@@ -3,6 +3,7 @@
 use JetBrains\PhpStorm\ArrayShape;
 use System\View;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Admin\AuthController;
 
 /**
  * @param string $name
@@ -53,4 +54,9 @@ function storeBlog(): array
 function destroyBlog(int $id): array
 {
     return (new BlogController)->destroy($id);
+}
+
+function loginPost()
+{
+    return (new AuthController())->loginPost();
 }
