@@ -8,7 +8,7 @@ require_once 'System\helpers.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modernize Free</title>
+    <title>Admin Panel</title>
     <link rel="shortcut icon" type="image/png" href="<?=baseUrl;?>public/back/src/assets/images/logos/favicon.png"/>
     <link rel="stylesheet" href="<?=baseUrl;?>public/back/src/assets/css/styles.min.css" />
 </head>
@@ -42,6 +42,23 @@ require_once 'System\helpers.php';
                             <span class="hide-menu">Dashboard</span>
                         </a>
                     </li>
+
+                    <!-- Start Sliders -->
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="<?=baseUrl. 'admin/sliders';?>" aria-expanded="false">
+                            <span><i class="ti ti-layout-dashboard"></i></span>
+                            <span class="hide-menu">Sliders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="<?=baseUrl. 'admin/sliders/create';?>" aria-expanded="false">
+                            <span><i class="ti ti-layout-dashboard"></i></span>
+                            <span class="hide-menu">Create Slider</span>
+                        </a>
+                    </li>
+                    <!-- End of Sliders -->
+
+                    <!-- Start Blogs -->
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                         <span class="hide-menu">Blogs</span>
@@ -58,82 +75,8 @@ require_once 'System\helpers.php';
                             <span class="hide-menu">Create Blog</span>
                         </a>
                     </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/ui-card.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                            <span class="hide-menu">Card</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/ui-forms.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                            <span class="hide-menu">Forms</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/ui-typography.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                            <span class="hide-menu">Typography</span>
-                        </a>
-                    </li>
-                    <li class="nav-small-cap">
-                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">AUTH</span>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/authentication-login.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                            <span class="hide-menu">Login</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/authentication-register.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                            <span class="hide-menu">Register</span>
-                        </a>
-                    </li>
-                    <li class="nav-small-cap">
-                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">EXTRA</span>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/icon-tabler.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                            <span class="hide-menu">Icons</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/sample-page.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-aperture"></i>
-                </span>
-                            <span class="hide-menu">Sample Page</span>
-                        </a>
-                    </li>
+                    <!-- End of Blogs -->
                 </ul>
-                <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
-                    <div class="d-flex">
-                        <div class="unlimited-access-title me-3">
-                            <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
-                            <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
-                        </div>
-                        <div class="unlimited-access-img">
-                            <img src="<?=baseUrl;?>public/back/assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
             </nav>
             <!-- End Sidebar navigation -->
         </div>

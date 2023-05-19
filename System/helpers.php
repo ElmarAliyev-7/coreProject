@@ -2,7 +2,7 @@
 
 use JetBrains\PhpStorm\ArrayShape;
 use System\View;
-use App\Http\Controllers\Admin\{AuthController, BlogController};
+use App\Http\Controllers\Admin\{AuthController, BlogController, SliderController};
 
 /**
  * @param string $name
@@ -50,9 +50,21 @@ function storeBlog(): array
 }
 
 #[ArrayShape(['status' => "int", 'message' => "string"])]
+function storeSlider(): array
+{
+    return (new SliderController())->store();
+}
+
+#[ArrayShape(['status' => "int", 'message' => "string"])]
 function destroyBlog(int $id): array
 {
     return (new BlogController)->destroy($id);
+}
+
+#[ArrayShape(['status' => "int", 'message' => "string"])]
+function destroySlider(int $id): array
+{
+    return (new SliderController)->destroy($id);
 }
 
 #[ArrayShape(['status' => "int", 'message' => "string"])]

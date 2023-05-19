@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\{AuthController, Dashboard, BlogController as AdminBlogController};
+use App\Http\Controllers\Admin\{AuthController, Dashboard, BlogController as AdminBlogController, SliderController};
 use App\Http\Controllers\Front\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
@@ -25,7 +25,7 @@ function blogShowPage($id = 1): bool|string
 }
 
 // Define a function to handle the create blog page
-function createBlogPage(): bool|string
+function createBlog(): bool|string
 {
     $blogs = new AdminBlogController();
     return print_r($blogs->create());
@@ -66,6 +66,20 @@ function adminBlogs(): bool|string
     return print_r($blogs->index());
 }
 
+// Define a function to handle the about page
+function adminSliders(): bool|string
+{
+    $sliders = new SliderController();
+    return print_r($sliders->index());
+}
+
+// Define a function to handle the create blog page
+function createSlider(): bool|string
+{
+    $blogs = new SliderController();
+    return print_r($blogs->create());
+}
+
 
 // Get the requested URL and Segments
 $requestUri = $_SERVER['REQUEST_URI'];
@@ -85,11 +99,15 @@ elseif($requestUri == '/admin' or $requestUri == '/admin/') :
 elseif($requestUri == '/admin/dashboard' or $requestUri == '/admin/dashboard/') :
     adminDashboard();die();
 elseif($requestUri == '/admin/blogs/create' or $requestUri == '/admin/blogs/create/') :
-    createBlogPage();die();
+    createBlog();die();
 elseif($requestUri == '/admin/logout' or $requestUri == '/admin/logout/') :
     logOut();die();
 elseif($requestUri == '/admin/blogs' or $requestUri == '/admin/blogs/') :
     adminBlogs();die();
+elseif($requestUri == '/admin/sliders' or $requestUri == '/admin/sliders/') :
+    adminSliders();die();
+elseif($requestUri == '/admin/sliders/create' or $requestUri == '/admin/sliders/create/') :
+    createSlider();die();
 else :
     // Handle 404 error
     header("HTTP/1.0 404 Not Found");
