@@ -11,6 +11,17 @@ use System\Request;
 
 class BlogController extends Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        //Auth user bosdusa logine yonelt
+        if(!isset($_SESSION['authUser'])) {
+            return die(header("Location:http://localhost:8080/admin"));
+        }
+    }
+
     /**
      * @return bool|string
      */
