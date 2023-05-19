@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\ {AuthController, Dashboard};
+use App\Http\Controllers\Admin\ {AuthController, Dashboard, BlogController as AdminBlogController};
 use App\Http\Controllers\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
@@ -59,6 +59,13 @@ function adminDashboard(): bool|string
     return print_r($dasboard->index());
 }
 
+// Define a function to handle the about page
+function adminBlogs(): bool|string
+{
+    $blogs = new AdminBlogController();
+    return print_r($blogs->index());
+}
+
 
 // Get the requested URL and Segments
 $requestUri = $_SERVER['REQUEST_URI'];
@@ -81,6 +88,8 @@ elseif($requestUri == '/admin/dashboard' or $requestUri == '/admin/dashboard/') 
     adminDashboard();die();
 elseif($requestUri == '/admin/logout' or $requestUri == '/admin/logout/') :
     logOut();die();
+elseif($requestUri == '/admin/blogs' or $requestUri == '/admin/blogs/') :
+    adminBlogs();die();
 else :
     // Handle 404 error
     header("HTTP/1.0 404 Not Found");
