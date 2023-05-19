@@ -44,20 +44,18 @@ require_once 'System\helpers.php';
                     </li>
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">UI COMPONENTS</span>
+                        <span class="hide-menu">Blogs</span>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="<?=baseUrl. 'admin/blogs';?>" aria-expanded="false">
                             <span><i class="ti ti-article"></i></span>
-                            <span class="hide-menu">Blogs</span>
+                            <span class="hide-menu">All Blogs</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?=baseUrl;?>public/back/src/html/ui-alerts.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                            <span class="hide-menu">Alerts</span>
+                        <a class="sidebar-link" href="<?=baseUrl. 'admin/blogs/create';?>" aria-expanded="false">
+                            <span><i class="ti ti-alert-circle"></i></span>
+                            <span class="hide-menu">Create Blog</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -132,7 +130,7 @@ require_once 'System\helpers.php';
                             <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
                         </div>
                         <div class="unlimited-access-img">
-                            <img src="../assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
+                            <img src="<?=baseUrl;?>public/back/assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -160,7 +158,7 @@ require_once 'System\helpers.php';
                         <li class="nav-item dropdown">
                             <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                                <img src="<?=baseUrl;?>public/back/src/assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                                 <div class="message-body">

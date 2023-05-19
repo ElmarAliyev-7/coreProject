@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Core\Controller;
 use JetBrains\PhpStorm\ArrayShape;
 use System\DB;
 use System\Request;

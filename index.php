@@ -3,7 +3,9 @@
 function autoloadClass($className)
 {
     $className = strtolower(str_replace('\\', '/', $className)) . '.php';
-    require_once $className;
+    if(file_exists($className)) {
+        require_once $className;
+    }
 }
 spl_autoload_register('autoloadClass');
 

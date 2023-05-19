@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\ {AuthController, Dashboard, BlogController as AdminBlogController};
+use App\Http\Controllers\Admin\{AuthController, Dashboard, BlogController as AdminBlogController};
 use App\Http\Controllers\Front\{HomeController, AboutController, BlogController};
 
 // Define a function to handle the home page
@@ -27,7 +27,7 @@ function blogShowPage($id = 1): bool|string
 // Define a function to handle the create blog page
 function createBlogPage(): bool|string
 {
-    $blogs = new BlogController();
+    $blogs = new AdminBlogController();
     return print_r($blogs->create());
 }
 
@@ -80,12 +80,12 @@ elseif($requestUri === '/blogs' or $requestUri === '/blogs/') :
     blogsPage();die();
 elseif($segments[1] === 'blogs' and $segments[2] === 'show'):
     blogShowPage($segments[3]);die();
-elseif($segments[1] === 'blogs' and $segments[2] === 'create') :
-    createBlogPage();die();
 elseif($requestUri == '/admin' or $requestUri == '/admin/') :
     admin();die();
 elseif($requestUri == '/admin/dashboard' or $requestUri == '/admin/dashboard/') :
     adminDashboard();die();
+elseif($requestUri == '/admin/blogs/create' or $requestUri == '/admin/blogs/create/') :
+    createBlogPage();die();
 elseif($requestUri == '/admin/logout' or $requestUri == '/admin/logout/') :
     logOut();die();
 elseif($requestUri == '/admin/blogs' or $requestUri == '/admin/blogs/') :

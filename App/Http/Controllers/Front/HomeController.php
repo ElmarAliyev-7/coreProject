@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Core\Controller;
 use System\DB;
 
 class HomeController extends Controller
