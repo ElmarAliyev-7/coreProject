@@ -47,6 +47,6 @@ class AuthController extends Controller
     public function logOut()
     {
         session_destroy();
-        return view('admin.auth.login', ['message' => 'You are Logged Out']);
+        return header("Location:http://localhost:8080/admin");
     }
 }

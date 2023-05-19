@@ -33,7 +33,7 @@ require_once 'System\helpers.php';
                                     $post = loginPost();
                                     if($post['status'] == 1) {
                                         echo "<div class='alert alert-success'>". $post["message"]. "</div>";
-                                        header("refresh:2;url=Location:http://localhost:8080/admin/dashboard");
+                                        header("refresh:1;url=http://localhost:8080/admin/dashboard");
                                     }elseif ($post['status'] == 0) {
                                         echo "<div class='alert alert-danger'>". $post["message"]. "</div>";
                                     }
