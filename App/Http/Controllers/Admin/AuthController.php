@@ -12,21 +12,26 @@ class AuthController extends Controller
     public function __construct()
     {
         parent::__construct();
-
-        //Auth user varsa dashboarda yonelt
-        if(isset($_SESSION['authUser'])) {
-            return die(header("Location:http://localhost:8080/admin/dashboard"));
-        }
     }
 
     public function login(): bool|string
     {
+        //Auth user varsa dashboarda yonelt
+        if(isset($_SESSION['authUser'])) {
+            return die(header("Location:http://localhost:8080/admin/dashboard"));
+        }
+
         return view('admin.auth.login');
     }
 
     #[ArrayShape(['status' => "int", 'message' => "string"])]
     public function loginPost(): array
     {
+        //Auth user varsa dashboarda yonelt
+        if(isset($_SESSION['authUser'])) {
+            return die(header("Location:http://localhost:8080/admin/dashboard"));
+        }
+
         $request = Request::get();
         $email = $request['email'];
         $password = $request['password'];
@@ -39,7 +44,7 @@ class AuthController extends Controller
         return ['status' => 0, 'message' => 'Credentials doesn\'t match'];
     }
 
-    public function logOut()
+    public function logout()
     {
         session_destroy();
         return header("Location:http://localhost:8080/admin");
