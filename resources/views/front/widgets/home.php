@@ -5,7 +5,8 @@
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(<?=baseUrl . '/' .$slider['image'];?>);">
+                        <div class="one-third js-fullheight order-md-last img"
+                             style="background-image:url('<?php echo baseUrl.'/'.$slider['image'];?>');">
                             <div class="overlay"></div>
                         </div>
                         <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
