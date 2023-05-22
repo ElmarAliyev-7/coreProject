@@ -82,6 +82,15 @@ class BlogController extends Controller
         endif;
     }
 
+    public function edit(int $id): bool|string
+    {
+        $blog = DB::table('blogs')->where('id', $id)->first();
+        if($blog){
+            return view('admin.blogs.edit', ['blog' => $blog]);
+        }
+        return '404 Not Found';
+    }
+
     #[ArrayShape(['status' => "int", 'message' => "string"])]
     public function destroy(int $id): array
     {

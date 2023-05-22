@@ -24,6 +24,10 @@ final class Route
                 return print_r($controller->{$route['method']}($segments[3]));
             }
 
+            if(isset($segments[3]) && $segments[3] === 'edit' && $route['method'] === 'edit') {
+                return print_r($controller->{$route['method']}($segments[4]));
+            }
+
             if(in_array(self::$requestUri, [$path, $path.'/'])) {
                 return print_r($controller->{$route['method']}());
             }

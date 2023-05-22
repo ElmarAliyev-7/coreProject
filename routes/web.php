@@ -10,8 +10,11 @@ Route::get('/admin', App\Http\Controllers\Admin\AuthController::class, 'login');
 Route::get('/admin/logout', App\Http\Controllers\Admin\AuthController::class, 'logout');
 
 Route::get('/admin/dashboard', App\Http\Controllers\Admin\Dashboard::class, 'index');
+
 Route::get('/admin/blogs', App\Http\Controllers\Admin\BlogController::class, 'index');
 Route::get('/admin/blogs/create', App\Http\Controllers\Admin\BlogController::class, 'create');
+Route::get('/admin/blogs/edit/{id}', App\Http\Controllers\Admin\BlogController::class, 'edit');
+
 Route::get('/admin/sliders', App\Http\Controllers\Admin\SliderController::class, 'index');
 Route::get('/admin/sliders/create', App\Http\Controllers\Admin\SliderController::class, 'create');
 /* Run */
