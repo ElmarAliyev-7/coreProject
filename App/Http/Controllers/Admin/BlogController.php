@@ -91,7 +91,7 @@ class BlogController extends Controller
         return '404 Not Found';
     }
 
-    public function update(int $id)
+    public function update(int $id): array
     {
         $ok = 1;
         $messages = [];
@@ -122,7 +122,7 @@ class BlogController extends Controller
                 // Upload Cover
                 $media->uploadImage($file_name, $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
                 // Remove Old Cover
-                $media->deleteImage($request['cover']);
+                $media->deleteImage($blog['cover']);
             }
 
             if($update) :

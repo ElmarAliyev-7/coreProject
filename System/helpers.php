@@ -49,7 +49,7 @@ function storeBlog(): array
     return (new BlogController)->store();
 }
 
-function updateBlog(int $id): bool|array|string
+function updateBlog(int $id): array
 {
     return (new BlogController)->update($id);
 }
