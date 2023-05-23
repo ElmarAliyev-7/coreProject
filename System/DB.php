@@ -151,6 +151,23 @@ class DB
         return $stmt->execute($execute_data);
     }
 
+    public static function update(array $request, int $id)
+    {
+        // Prepare values
+        $values = '';
+        $execute_data = ['id' => $id];
+        foreach ($request as $key => $value) :
+            $prepared_key = ":$key";
+            $values .= $key . "=" . $prepared_key . ",";
+            $execute_data[$key] = $value;
+        endforeach;
+        $values = substr(strtolower($values), 0,-1);
+        // Run Query
+        $sql = "UPDATE  " . self::$table . " SET $values WHERE id=:id";
+        $stmt= self::$conn->prepare($sql);
+        $stmt->execute($execute_data);
+    }
+
     /**
      * @param int $id
      * @return bool

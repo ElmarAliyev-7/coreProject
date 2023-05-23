@@ -49,6 +49,11 @@ function storeBlog(): array
     return (new BlogController)->store();
 }
 
+function updateBlog(int $id)
+{
+    return (new BlogController)->update($id);
+}
+
 #[ArrayShape(['status' => "int", 'message' => "string"])]
 function storeSlider(): array
 {

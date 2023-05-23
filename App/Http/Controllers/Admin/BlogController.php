@@ -91,6 +91,52 @@ class BlogController extends Controller
         return '404 Not Found';
     }
 
+    public function update(int $id)
+    {
+        $ok = 1;
+        $messages = [];
+        $request = Request::get();
+        $blog = DB::table('blogs')->where('id', $id)->first();
+
+        if(empty($request['title'])) :
+            $ok = 0;
+            array_push($messages, 'Title is required');
+        elseif(empty($request['description'])) :
+            $ok = 0;
+            array_push($messages, 'Description is required');
+        endif;
+
+        if($ok) :
+            $target_dir = "storage/uploads/blogs/";
+            $file_name = strtotime("now") . $_FILES["cover"]["name"];
+            // Update Data
+            $data = [];
+            $data['title'] = $request['title'];
+            $data['description'] = $request['description'];
+            $data['cover'] = isset($_FILES['cover']) ? $target_dir . $file_name : $blog['cover'];
+            $data['status'] = (isset($request['status']) and $request['status'] == 'on') ? 1 : 0;
+            $update = DB::table('blogs')->update($data, $id);
+            return print_r($update);
+            $uploadOk = 0;
+            if(!empty($request['cover'])){
+                $media = new MediaTrait;
+                // Upload Cover
+                $upload = $media->uploadImage($file_name, $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
+                // Remove Old Cover
+                $media->deleteImage($request['cover']);
+                $uploadOk = $upload['uploadOk'];
+            }
+
+            if($update and $uploadOk) :
+                return ['status' => 1, 'message' => 'Blog updated successfully'];
+            else :
+                return ['status' => 0, 'message' => $messages[0]];
+            endif;
+        else :
+            return ['status' => 0, 'message' => $messages[0]];
+        endif;
+    }
+
     #[ArrayShape(['status' => "int", 'message' => "string"])]
     public function destroy(int $id): array
     {

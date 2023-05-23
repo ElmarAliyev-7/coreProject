@@ -63,9 +63,18 @@
                                 </div>
                             </td>
                             <td class="border-bottom-0">
-                                <form action="" method="post">
-                                    <button name="delete" class="btn btn-danger" type="submit" value="<?=$blog['id'];?>">Delete</button>
-                                </form>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a class="btn btn-primary" href="<?=baseUrl . 'admin/blogs/edit/' . $blog['id'];?>">Edit</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <form action="" method="post">
+                                                <button name="delete" class="btn btn-danger" type="submit" value="<?=$blog['id'];?>">Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
 x                        </tr>
                         <?php endforeach;?>

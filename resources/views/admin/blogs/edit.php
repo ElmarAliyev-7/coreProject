@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <?php
                         if(isset($_POST['submit'])) :
-                            $result = storeBlog();
+                            $result = updateBlog($blog['id']);
                             if($result['status']) :
                                 echo "<div class='alert alert-success'>" . $result["message"] . "</div>";
                             else :
@@ -18,8 +18,7 @@
                         <form method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" name="title" class="form-control" id="title" placeholder="Enter title"
-                                       value="<?=$blog['title'];?>">
+                                <input type="text" name="title" class="form-control" id="title" placeholder="Enter title" value="<?=$blog['title'];?>">
                             </div>
                             <div class="form-group">
                                 <label for="desc">Description</label>
@@ -27,11 +26,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="cover">Cover</label>
+                                <img src="<?=baseUrl . $blog['cover'];?>" alt="Blog Cover" width="100px" height="100px" class="my-2">
                                 <input type="file" name="cover" class="form-control" id="cover">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" name="status" class="form-check-input" id="status"
-                                    <?php if(isset($blog['status'])){ echo 'checked'; }?> />
+                                    <?php if($blog['status']){ echo 'checked'; }?> />
                                 <label class="form-check-label" for="status">Status</label>
                             </div>
                             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
