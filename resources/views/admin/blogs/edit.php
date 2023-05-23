@@ -29,6 +29,7 @@
                                 <label for="cover">Cover</label>
                                 <img src="<?=baseUrl . $blog['cover'];?>" alt="Blog Cover" width="100px" height="100px" class="my-2">
                                 <input type="file" name="cover" class="form-control" id="cover">
+                                <input type="hidden" name="old_cover" value="<?=$blog['cover'];?>">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" name="status" class="form-check-input" id="status"

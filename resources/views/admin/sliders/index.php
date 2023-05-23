@@ -3,6 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4">Sliders Page</h5>
+                <a class="btn btn-success" href="<?=baseUrl . 'admin/sliders/create';?>">Create New Blog</a>
                 <?php
                 if(isset($_POST['delete'])) :
                     $result = destroySlider($_POST['delete']);

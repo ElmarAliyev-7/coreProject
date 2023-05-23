@@ -3,6 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4">Blogs Page</h5>
+                <a class="btn btn-success" href="<?=baseUrl . 'admin/blogs/create';?>">Create New Blog</a>
                 <?php
                     if(isset($_POST['delete'])) :
                         $result = destroyBlog($_POST['delete']);

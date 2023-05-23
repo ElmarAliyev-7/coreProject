@@ -96,7 +96,6 @@ class BlogController extends Controller
         $ok = 1;
         $messages = [];
         $request = Request::get();
-        $blog = DB::table('blogs')->where('id', $id)->first();
 
         if(empty($request['title'])) :
             $ok = 0;
@@ -107,24 +106,26 @@ class BlogController extends Controller
         endif;
 
         if($ok) :
-            $target_dir = "storage/uploads/blogs/";
-            $file_name = strtotime("now") . $_FILES["cover"]["name"];
             // Update Data
             $data = [];
             $data['title'] = $request['title'];
             $data['description'] = $request['description'];
-            $data['cover'] = isset($_FILES['cover']) ? $target_dir . $file_name : $blog['cover'];
+            $data['cover'] = $request['old_cover'];
             $data['status'] = (isset($request['status']) and $request['status'] == 'on') ? 1 : 0;
-            $update = DB::table('blogs')->update($data, $id);
 
             if(!empty($request['cover'])){
+                $target_dir = "storage/uploads/blogs/";
+                $file_name = strtotime("now") . $_FILES["cover"]["name"];
+                $data['cover'] = $target_dir . $file_name;
+
                 $media = new MediaTrait;
                 // Upload Cover
                 $media->uploadImage($file_name, $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
                 // Remove Old Cover
-                $media->deleteImage($blog['cover']);
+                $media->deleteImage($request['old_cover']);
             }
 
+            $update = DB::table('blogs')->update($data, $id);
             if($update) :
                 return ['status' => 1, 'message' => 'Blog updated successfully'];
             else :
