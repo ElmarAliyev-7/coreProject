@@ -116,18 +116,16 @@ class BlogController extends Controller
             $data['cover'] = isset($_FILES['cover']) ? $target_dir . $file_name : $blog['cover'];
             $data['status'] = (isset($request['status']) and $request['status'] == 'on') ? 1 : 0;
             $update = DB::table('blogs')->update($data, $id);
-            return print_r($update);
-            $uploadOk = 0;
+
             if(!empty($request['cover'])){
                 $media = new MediaTrait;
                 // Upload Cover
-                $upload = $media->uploadImage($file_name, $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
+                $media->uploadImage($file_name, $_FILES["cover"]["tmp_name"], $_FILES["cover"]["size"],$target_dir);
                 // Remove Old Cover
                 $media->deleteImage($request['cover']);
-                $uploadOk = $upload['uploadOk'];
             }
 
-            if($update and $uploadOk) :
+            if($update) :
                 return ['status' => 1, 'message' => 'Blog updated successfully'];
             else :
                 return ['status' => 0, 'message' => $messages[0]];

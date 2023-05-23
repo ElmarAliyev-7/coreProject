@@ -151,7 +151,7 @@ class DB
         return $stmt->execute($execute_data);
     }
 
-    public static function update(array $request, int $id)
+    public static function update(array $request, int $id): bool
     {
         // Prepare values
         $values = '';
@@ -165,7 +165,7 @@ class DB
         // Run Query
         $sql = "UPDATE  " . self::$table . " SET $values WHERE id=:id";
         $stmt= self::$conn->prepare($sql);
-        $stmt->execute($execute_data);
+        return $stmt->execute($execute_data);
     }
 
     /**

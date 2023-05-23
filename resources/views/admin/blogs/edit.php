@@ -10,6 +10,7 @@
                             $result = updateBlog($blog['id']);
                             if($result['status']) :
                                 echo "<div class='alert alert-success'>" . $result["message"] . "</div>";
+                                header("Refresh:1");
                             else :
                                 echo "<div class='alert alert-danger'>" . $result["message"] . "</div>";
                             endif;
