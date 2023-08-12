@@ -4,7 +4,7 @@ use JetBrains\PhpStorm\ArrayShape;
 use System\View;
 use App\Http\Controllers\Admin\{AuthController, BlogController, SliderController};
 
-const baseUrl = 'http://localhost:8080';
+const baseUrl = 'http://localhost:8080/';
 
 /**
  * @param string $name
