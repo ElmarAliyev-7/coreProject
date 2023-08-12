@@ -74,8 +74,7 @@ function destroySlider(int $id): array
     return (new SliderController)->destroy($id);
 }
 
-#[ArrayShape(['status' => "int", 'message' => "string"])]
-function loginPost(): array
+function loginPost()
 {
     return (new AuthController())->loginPost();
 }

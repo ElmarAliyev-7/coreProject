@@ -23,8 +23,7 @@ class AuthController extends Controller
         return view('admin.auth.login');
     }
 
-    #[ArrayShape(['status' => "int", 'message' => "string"])]
-    public function loginPost(): array
+    public function loginPost()
     {
         //Auth user varsa dashboarda yonelt
         if(isset($_SESSION['authUser'])) {
@@ -35,7 +34,7 @@ class AuthController extends Controller
         $email = $request['email'];
         $password = $request['password'];
         $user = DB::table('users')->where(['email' => $email, 'password' => $password])->first();
-
+        return dd($user);
         if($user){
             $_SESSION['authUser'] = $user;
             return ['status' => 1, 'message' => 'Login Successfully'];
