@@ -7,7 +7,7 @@ final class Route
     private static string $requestUri;
     private static array $routes;
 
-    public static function get(string $path, $controller, $method)
+    public static function get(string $path, $controller, $method): void
     {
         self::$routes[$path] = ['controller' => $controller, 'method' => $method];
     }

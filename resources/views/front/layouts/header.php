@@ -1,7 +1,3 @@
-<?php
-require_once 'System/helpers.php';
-const baseUrl = 'http://localhost:8080';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

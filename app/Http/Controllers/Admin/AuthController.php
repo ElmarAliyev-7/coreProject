@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Core\Controller;
+use App\Http\Controllers\Controller;
 use JetBrains\PhpStorm\ArrayShape;
-use System\DB;
-use System\Request;
+use System\{DB, Request};
 
 class AuthController extends Controller
 {

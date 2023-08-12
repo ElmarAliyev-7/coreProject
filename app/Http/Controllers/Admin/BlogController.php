@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Core\Controller;
+use App\Http\Controllers\Controller;
 use App\Http\Traits\MediaTrait;
 use JetBrains\PhpStorm\ArrayShape;
-use System\DB;
+use System\{DB, Request};
 use Exception;
-use System\Request;
 
 class BlogController extends Controller
 {

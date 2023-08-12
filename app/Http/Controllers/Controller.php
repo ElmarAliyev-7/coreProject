@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Core;
-
-require_once 'System/helpers.php';
+namespace App\Http\Controllers;
 
 class Controller
 {

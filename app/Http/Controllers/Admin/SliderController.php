@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Core\Controller;
+use App\Http\Controllers\Controller;
 use App\Http\Traits\MediaTrait;
 use JetBrains\PhpStorm\ArrayShape;
-use System\DB;
-use System\Request;
+use System\{DB, Request};
 use Exception;
 
 class SliderController extends Controller

@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "files": ["app/Http/Helpers/helpers.php"],
+        "psr-4": {
+            "App\\": "app/",
+            "System\\" : "system/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Elmar",
+            "email": "liyevelmar02@gmail.com"
+        }
+    ],
+    "require": {}
+}
